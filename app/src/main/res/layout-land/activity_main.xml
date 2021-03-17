@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="5dp"
-    tools:context=".MainActivity"
-    tools:layout_editor_absoluteX="5dp"
-    tools:layout_editor_absoluteY="81dp">
+    tools:context="com.example.helloconstraint.MainActivity">
 
     <Button
         android:id="@+id/button_toast"
@@ -20,6 +17,20 @@
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/button_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@color/design_default_color_primary"
+        android:onClick="countUp"
+        android:text="@string/button_label_count"
+        android:textColor="@color/white"
+        android:layout_below="@+id/show_count"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintBaseline_toBaselineOf="@+id/show_count"
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <TextView
         android:id="@+id/show_count"
@@ -40,20 +51,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button_count"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:background="@color/design_default_color_primary"
-        android:onClick="countUp"
-        android:text="@string/button_label_count"
-        android:textColor="@color/white"
-        android:layout_below="@+id/show_count"
-        android:layout_centerHorizontal="true"
-        app:layout_constraintBaseline_toBaselineOf="@+id/show_count"
-        app:layout_constraintStart_toStartOf="parent"/>
-
-    <Button
         android:id="@+id/button_zero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -64,9 +61,6 @@
         android:text="Zero"
         app:layout_constraintBottom_toTopOf="@+id/button_count"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_toast"
-        />
-
-
+        app:layout_constraintTop_toBottomOf="@+id/button_toast"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
